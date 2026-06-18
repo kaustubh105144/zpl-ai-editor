@@ -1,10 +1,7 @@
 ---
-
 # ZPL AI Editor
 ### Bringing Natural Language AI to Mission-Critical Label Operations
-
 ---
-
 ## Why This Exists
 
 In manufacturing and supply chains, a label is not a sticker. It is a compliance document, a traceability record, and an operational instruction — all in one. Get it wrong and you delay shipments, fail audits, or pull product off the line.
@@ -16,7 +13,6 @@ Production spots an issue. Raises a ticket. IT edits raw ZPL code. Shares a prev
 I built this PoC to answer one question: *can we give production teams the ability to make label changes themselves — without ever compromising the controls that make labels trustworthy?*
 
 ---
-
 ## The Answer
 
 Yes. But only if you design governance in from day one — not as an afterthought.
@@ -26,7 +22,6 @@ This platform lets a production operator type "move the QR code down 5mm and upd
 **The operator never touches ZPL. IT never loses control. The AI never acts autonomously.**
 
 ---
-
 ## What I Designed
 
 The hardest part of this project was not the AI integration. It was the constraint system around it.
@@ -44,19 +39,17 @@ The answer required four deliberate decisions:
 **Zero path to production.** The system has no connectivity to live production environments. Promotion is a deliberate, manual, IT-controlled action — every time.
 
 ---
-
 ## Impact
 
 | | Before | After |
 |---|---|---|
-| Label change turnaround | 2–3 days | 20–30 minutes |
+| Label change turnaround | 2–3 days | ~45 minutes (avg) |
 | IT involvement per change | Required | Approval only |
 | IT workload on label tasks | High | ↓ 60–70% |
 | Misprint & rejection rate | High | ↓ 50–70% |
 | Process cost | Baseline | ↓ 30–40% |
 
 ---
-
 ## Screenshots
 
 *(See `/screenshots` folder)*
@@ -64,7 +57,6 @@ The answer required four deliberate decisions:
 `01 — Login` · `02 — Admin Dashboard` · `03 — AI Chat` · `04 — Side-by-Side Preview`
 
 ---
-
 ## The Bigger Point
 
 This project is not really about ZPL.
@@ -77,8 +69,9 @@ The architecture of *constrained AI with human oversight* is the reusable idea. 
 ## Stack
 
 <sup><sub>Amazon Bedrock · AWS EC2 · AWS ALB · Route53 · AWS WAF · RDS PostgreSQL · ElastiCache Redis · AWS Secrets Manager · S3 + CloudFront · Labelary API</sub></sup>
+
+Built using vibe coding and prompt engineering techniques.
+
 ---
-
 *Proof of Concept — isolated test environment, no connectivity to live production systems.*
-
 ---
